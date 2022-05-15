@@ -1,0 +1,27 @@
+<%-include('header');-%>
+    <div class="date">
+
+      <h1 style="margin-bottom:10%;color:#2A2550;"><%=title%></h1>
+    </div>
+    
+    
+    <%if (i.length===0){%>
+      
+      <%}else{%>
+        <div class="container">
+          <%for (let x=0;x<i.length;x++){%>
+          <div class="item-box">
+            <input type="checkbox" class="check"><p><%=i[x]%></in>
+            </div>
+            <%}%>
+          <%}%>
+        </div>
+        <div class="item-add">
+   
+          <form action="/" method="post">
+            <input type="text" name="item" class="input" placeholder="To-Do Name">
+            <button type="submit" class="button" name="submit" value=<%=title%>>+</button>
+          </form>
+        </div>
+ <%-include('footer');-%>
+ 
